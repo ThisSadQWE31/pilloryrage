@@ -1,6 +1,14 @@
 repeat wait() until game:IsLoaded()
 if game.PlaceId ~= 112420803 then return end
 
+--notification--
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "PR SCRIPT";
+    Text = "PR Script Succesfully Loaded!";
+    Duration = 5;
+})
+
 
 --locals--
 local owner = game.Players.LocalPlayer
@@ -11,9 +19,105 @@ local plr = owner
 local chr = owner.Character
 local character = owner.Character
 local char = owner.Character
+local commandlist = {}
+local Loops = {}
+
+--functions--
+
+function addCommand(name,args,func)
+  table.insert(commandlist,{name,args,func})
+end
+--COMMANDS--
+
+--trap--
+
+addCommand(".trap",{"player","time"},function(args)
+  local function GetCage()
+  if game.Players.LocalPlayer.Backpack:FindFirstChild("PortableJustice") then
+      local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("PortableJustice")
+      tool.Parent = game.Players.LocalPlayer.Character
+      return tool
+  elseif game.Players.LocalPlayer.Character:FindFirstChild("PortableJustice") then
+      return game.Players.LocalPlayer.Character:FindFirstChild("PortableJustice")
+  else
+      game.Players:Chat("gear me 82357101")
+      repeat wait() until game.Players.LocalPlayer.Backpack:FindFirstChild("PortableJustice")
+      local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("PortableJustice")
+      tool.Parent = game.Players.LocalPlayer.Character
+      return tool
+  end
+end
+local function CagePlayer(Player)
+  local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+  if Player and Player.Character and Player.Character.Head and not Player.Character:FindFirstChild("Part") then
+      local A_1 = Player.Character
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Player.Character.Head.CFrame
+      GetCage().MouseClick:FireServer(A_1)
+      repeat game:GetService("RunService").RenderStepped:Wait() until Player.Character:FindFirstChild("Part")
+      GetCage():Destroy()
+      game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+      game.Players:Chat("removetools me")
+      game.Players:Chat("pm "..Player.Name.." [PR Script]\nYou are currently trapped for "..args[2].."s.")
+  end
+end
+Loops.trap = true
+spawn(function()
+  wait(tonumber(args[2]))
+  Loops.trap = false
+end)
+local Player = GetPlayers(args[1])
+repeat game:GetService("RunService").RenderStepped:Wait()
+  pcall(function()
+for i,v in pairs(Player) do
+  pcall(function()
+      CagePlayer(v)
+  end)
+end
+  end)
+until not Loops.trap
+for i,v in pairs(Player) do
+  game.Players:Chat("reset "..v.Name)
+  wait()
+  game.Players:Chat("pm "..v.Name.." [PR Script]\nYou are no longer trapped.")
+  wait()
+end
+end)
+
+--lock--
+
+addCommand(".lock",{"player"},function(args)
+  Loops.softlock = true
+  repeat wait()
+  for i,v in pairs(GetPlayers(args[1])) do
+      if not v then error("Break") end
+      pcall(function()
+      if v.Character.HumanoidRootPart.Position.Y < 500 then
+      game.Players:Chat("skydive "..v.Name)
+      game.Players:Chat("fling "..v.Name)
+      game.Players:Chat("punish "..v.Name)
+      v.Character.HumanoidRootPart.Position = v.Character.HumanoidRootPart.Position+Vector3.new(0,999,0)
+      end
+      if not v.Character:FindFirstChildOfClass("Model") then
+          game.Players:Chat("name "..v.Name..[[ [PR Script]
+You are currently softlocked.]])
+      end
+      if v:DistanceFromCharacter(v.Character.Torso.Position)>1 then
+          game.Players:Chat("size "..v.Name.." 0.3")
+      end
+      end)
+  end
+  until not Loops.softlock
+end)
+
+addCommand(".unlock",{},function(args)
+  Loops.softlock = false
+end)
 
 --antiabuse--
-addCommand(".antiabuse",{},function()
+
+plr.Chatted:Connect(function(antiabuse)
+if string.sub(antiabuse, 1) == ".antiabuse" then
+
   Loops.antiabuse = true
   repeat game:GetService("RunService").RenderStepped:Wait() pcall(function()
       if lp.PlayerGui:FindFirstChild("EFFECTGUIBLIND") then
@@ -60,7 +164,9 @@ end)
 
 --antivoid--
 
-addCommand(".antivoid",{},function()
+plr.Chatted:Connect(function(antivoid)
+if string.sub(antivoid, 1) == ".antivoid" then
+
   Loops.antivoid = true
   repeat game:GetService("RunService").RenderStepped:Wait()pcall(function()
       if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart then
@@ -103,15 +209,15 @@ end)
 --subzero--
 
 player.Chatted:Connect(function(message)
-    if string.sub(message, 1, 8) == "subzero " then
-          local name = string.sub(message, 9)
+    if string.sub(message, 1, 9) == ".subzero " then
+          local name = string.sub(message, 10)
                 game.Players:Chat("gear " .. name .. " 0000000000000000000000000000000000000000000000000087361662")
                 game.Players:Chat("gear " .. name .. " 0000000000000000000000000000000000000000000000000066896601")
   end
   end)
   
             player.Chatted:Connect(function(message)
-    if string.sub(message, 1) == "subzero" then
+    if string.sub(message, 1) == ".subzero" then
                 game.Players:Chat("gear me 0000000000000000000000000000000000000000000000000087361662")
                 game.Players:Chat("gear me 0000000000000000000000000000000000000000000000000066896601")
                 end
@@ -120,7 +226,7 @@ player.Chatted:Connect(function(message)
 --rocket--
 
 player.Chatted:Connect(function(message)
-    if string.sub(message, 1) == "rocket" then
+    if string.sub(message, 1) == ".rocket" then
 
       
             game.Players:Chat("gear me 000000000000000000000000000000000067747912")
@@ -129,7 +235,7 @@ player.Chatted:Connect(function(message)
 
 --ice sword--
 player.Chatted:Connect(function(message)
-    if string.sub(message, 1) == "ice" then
+    if string.sub(message, 1) == ".ice" then
 
       
             game.Players:Chat("gear me 0000000000000000000000000000000000261439002")
@@ -151,8 +257,8 @@ end)
 --pr tools--
 
 player.Chatted:Connect(function(message)
-    if string.sub(message, 1, 3) == "pr " then
-      local name = string.sub(message, 4)
+    if string.sub(message, 1, 4) == ".pr " then
+      local name = string.sub(message, 5)
       
             game.Players:Chat("gear " .. name .. " 000000000000000000000000000000000068539623")
             game.Players:Chat("gear " .. name .. " 0000000000000000000000000000000000583030187")
@@ -164,7 +270,7 @@ end)
 --punish all--
 
       plr.Chatted:Connect(function(pa)
-          if string.sub(pa, 1) == ("pa") then
+          if string.sub(pa, 1) == (".pa") then
 
       game.Players:Chat("punish others")
       game.Players:Chat("h Succesfully Punished All")
@@ -175,7 +281,7 @@ end)
 --dark blade--
 
       game.Players.LocalPlayer.Chatted:connect(function(msgg)
-  if string.sub(msgg, 1) == ("dark blade") then
+  if string.sub(msgg, 1) == (".dark blade") then
               wait(.1)
               game.Players:Chat("h Light - Dark Controlable Activated!")
               wait(.1)
@@ -188,7 +294,7 @@ end)
 
 --carpet--
       game.Players.LocalPlayer.Chatted:connect(function(carpet)
-  if string.sub(carpet, 1) == ("carpet") then
+  if string.sub(carpet, 1) == (".carpet") then
               wait(.1)
               game.Players:Chat("h RainbowCarpet Activated!")
               wait(.1)
@@ -200,13 +306,13 @@ end)
 --owners--
 
       game.Players.LocalPlayer.Chatted:connect(function(owner1)
-  if string.sub(owner1, 1) == ("owner") then
+  if string.sub(owner1, 1) == (".owner") then
   game.Players:Chat("m OWNER OF THIS SCRIPT IS ATPROG (PR)")
   end
   end)
 
   game.Players.LocalPlayer.Chatted:connect(function(owner2)
-  if string.sub(owner2, 1) == ("owner2") then
+  if string.sub(owner2, 1) == (".owner2") then
   game.Players:Chat("m HELPER OF THIS SCRIPT IS IceStuds")
   end
   end)
@@ -234,15 +340,15 @@ player.Chatted:Connect(function(message)
 --sabotage--
 
 player.Chatted:Connect(function(sabotage)
-   if string.sub(sabotage, 1, 9) == "sabotage " then
-   local name = string.sub(sabotage, 10)
+   if string.sub(sabotage, 1, 10) == ".sabotage " then
+   local name = string.sub(sabotage, 11)
    
    game.Players:Chat(".spamcommands 0.1 pm/" .. name .. "/🖤💀😃😚🖤💀😃⚫🖤💀😃🖤⚫😃😗🖤💀😃😗🖤😄😃😗🖤😗🖤😚😃😗🖤😄😃💀🖤😃😚🇸🇷😄😃😄🖤😗🖤🥰😃😗🖤😄😃🖤😗😃😄🖤😗😃😄🖤💀😃😚🖤💀😃🖤😚😃💀🇸🇷😚😃💀😃😚♥️😄😭??♥️😄🖤🤣♥️😃💀??😚🖤💀♥️😄😃💀😃??🖤💀♥️🤣😃😄🥳😚😃😄🥳😚😃🥰😃🥳😚😗😃🥳😄😭🇹🇷😂🥰🖤💀♥️😗😙😚😃😗🖤😄😃😗🇸🇷😄😃😭😗😃💀🖤💀")
    end
    end)
    
    player.Chatted:Connect(function(unsabotage)
-   if string.sub(unsabotage, 10) == "unsabotage" then
+   if string.sub(unsabotage, 1) == ".unsabotage" then
    
    game.Players:Chat(".unspam")
    end
@@ -268,8 +374,8 @@ player.Chatted:Connect(function(message)
 --bend--
 
 player.Chatted:Connect(function(message)
-    if string.sub(message, 1, 5) == "bend " then
-        local name = string.sub(message, 6)
+    if string.sub(message, 1, 6) == ".bend " then
+        local name = string.sub(message, 7)
         
 game.Players:Chat("rocket/"..name)
 wait(.5)
@@ -322,31 +428,17 @@ end
 
 game.Players.PlayerAdded:Connect(HandleExistingPlayers)
 
-game.Players.LocalPlayer.Chatted:Connect(function(message)
-    if string.sub(message:lower(), 1, 8) == "hatspam " then
-        local targetNamePart = string.sub(message, 9)
-        for i, v in pairs(game.Players:GetPlayers()) do
-            if v.Name:lower() == targetNamePart:lower() then
-                for j = 1, 50 do
-                    game.Players:Chat("hat " .. v.Name .. " 33070696")
-                end
-                break
-            end
-        end
-    end
-end)
-
 --music's--
 
 plr.Chatted:Connect(function(egirl)
-if string.sub(egirl, 1) == ("girl") then
+if string.sub(egirl, 1) == (".girl") then
 
 game.Players:Chat("music 0000000000000000000000000000000000000000000006823597327")
 end
 end)
 
 plr.Chatted:Connect(function(fnaf)
-   if string.sub(fnaf, 1) == ("fnaf") then
+   if string.sub(fnaf, 1) == (".fnaf") then
    game.Players:Chat("music 0000000000000000000000000000000000000000000000000000000000000000000006913550990")
    wait(.25)
    game.Players:Chat("h Now Playing -It's Been So Long- :)")
@@ -383,8 +475,8 @@ end)
 --break--
 
   plr.Chatted:connect(function(message)
-  if string.sub(message, 1, 6) == ("break ") then
-  local victim = string.sub(message, 7)
+  if string.sub(message, 1, 7) == (".break ") then
+  local victim = string.sub(message, 8)
             
                 game.Players:Chat("freeze " .. victim)
                 for i = 1, 100 do
@@ -407,7 +499,7 @@ end)
   --unpunish all--
   
       plr.Chatted:Connect(function(upa)
-          if string.sub(upa, 1) == ("upa") then
+          if string.sub(upa, 1) == (".upa") then
 
       game.Players:Chat("unpunish all")
       game.Players:Chat("h Succesfully Unpunished All")
@@ -418,8 +510,8 @@ end)
       --fling--
       
   player.Chatted:Connect(function(message)
-    if string.sub(message, 1, 4) == "bye " then
-      local name = string.sub(message, 5)
+    if string.sub(message, 1, 5) == ".bye " then
+      local name = string.sub(message, 6)
       game.Players:Chat("speed " .. name .. " 0")
       game.Players:Chat("fling " .. name)
       
@@ -428,39 +520,39 @@ end)
 
 --char's-
       plr.Chatted:Connect(function(atprog)
-          if string.sub(atprog, 1, 7) == ("atprog ") then
-    local name = string.sub(atprog, 8)
+          if string.sub(atprog, 1, 8) == (".atprog ") then
+    local name = string.sub(atprog, 9)
       game.Players:Chat("char " .. name .. " 1389780396")
 
       end
       end)
 
 plr.Chatted:Connect(function(menaal)
-          if string.sub(menaal, 1, 7) == ("menaal ") then
-          local name = string.sub(menaal, 8)
+          if string.sub(menaal, 1, 8) == (".menaal ") then
+          local name = string.sub(menaal, 9)
       game.Players:Chat("char " .. name .. " 1793973864")
       end
       end)
       
       
 plr.Chatted:Connect(function(agspureiam)
-      if string.sub(agspureiam, 1, 11) == "agspureiam " then
-      local name = string.sub(agspureiam, 12)
+      if string.sub(agspureiam, 1, 12) == ".agspureiam " then
+      local name = string.sub(agspureiam, 13)
      game.Players:Chat("char " .. name .. " 36377783")
       end
       end)
   
 plr.Chatted:Connect(function(tech)
-          if string.sub(tech, 1, 5) == ("tech ") then
-local name = string.sub(tech, 6)
+          if string.sub(tech, 1, 6) == (".tech ") then
+local name = string.sub(tech, 7)
       game.Players:Chat("char " .. name .. " 1702851506")
 
       end
       end)
       
       plr.Chatted:Connect(function(aria)
-          if string.sub(aria, 1, 5) == ("aria ") then
-          local name = string.sub(aria, 6)
+          if string.sub(aria, 1, 6) == (".aria ") then
+          local name = string.sub(aria, 7)
 
       game.Players:Chat("char " .. name .. " 2781438808")
       
@@ -468,8 +560,8 @@ local name = string.sub(tech, 6)
       end)
       
       plr.Chatted:Connect(function(mel)
-          if string.sub(mel, 1, 4) == ("mel ") then
-          local name = string.sub(mel, 5)
+          if string.sub(mel, 1, 5) == (".mel ") then
+          local name = string.sub(mel, 6)
 
       game.Players:Chat("char " .. name .. " 619659263")
       
@@ -482,6 +574,56 @@ local name = string.sub(tech, 6)
       if string.sub(dies, 1) == ("reset") then
       game.Players:Chat("h im bored so ill reset y'all.")
       game.Players:Chat("reset others")
-
+      
       end
-      end) 
+      end)
+     
+--break/fix cameras--
+
+addCommand("breakcam",{},function()
+  game.Players:Chat("tp others me")
+  game.Players:Chat("gear me 68354832")
+  repeat wait() until game.Players.LocalPlayer.Backpack:FindFirstChild("BlizzardWand")
+  local wand = game.Players.LocalPlayer.Backpack:FindFirstChild("BlizzardWand")
+  wand.Parent = plr.Character
+  wait(0.2)
+  wand:Activate()
+  wait(0.4)
+  game.Players:Chat("reset all")
+end)
+
+addCommand("fixcam",{},function()
+  game.Players:Chat("tp others me")
+  game.Players:Chat("gear me 68354832")
+  repeat wait() until game.Players.LocalPlayer.Backpack:FindFirstChild("BlizzardWand")
+  local wand = plr.Backpack:FindFirstChild("BlizzardWand")
+  wand.Parent = plr.Character
+  wait(0.2)
+  wand:Activate()
+end)
+
+--auto shits(player's)--
+
+game.Players.PlayerAdded:Connect(function(player)
+	if player.Name == "feistve" then
+	wait(1)
+	game.Players:Chat("clr")
+		game.Players:Chat("h Ew Aria is Here (PR SCRIPT)")
+	end
+end)
+
+game.Players.PlayerAdded:Connect(function(player)
+    if player.Name:lower() == "atprog" then
+       wait(1)
+        game.Players:Chat("clr")
+        game.Players:Chat("h ATPROG IS HERE (PR SCRIPT OWNER)")
+    end
+end)
+
+game.Players.PlayerAdded:Connect(function(player)
+    if player.Name:lower() == "PislickE4ver7" then
+       wait(1)
+        game.Players:Chat("clr")
+        game.Players:Chat("h PislickE4ver7 IS HERE (PR SCRIPT OWNER)")
+    end
+end) 
