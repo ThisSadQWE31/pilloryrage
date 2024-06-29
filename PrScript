@@ -1,5 +1,6 @@
 --Another Version of BanHammer--
 --KickHammer--
+--Edited by atprog--
 
 --kill - used by default
 --hkick - hatkick
@@ -8,7 +9,7 @@
 local owner = game.Players.LocalPlayer
 game.Players:Chat("gear me 10468797")
 local hammer = owner.Backpack:WaitForChild("BanHammer")
-local mode = "kill"
+local mode = "hkick"
 
 owner.Chatted:Connect(function(msg)
 	local BM = string.split(msg," ") -- FIREYAUTO
@@ -26,9 +27,9 @@ hammer.Handle.Touched:Connect(function(p)
 		game.Players:Chat("kill "..p.Parent.Name)
 	end
 	if mode == "hkick" then
-		game.Players:Chat(".hkick "..p.Parent.Name)
-   game.Players:Chat("reset "..p.Parent.Name)
-   game.Players:Chat("ungear me")
+		game.Players:Chat("reset "..p.Parent.Name)
+   wait(0.10)
+   game.Players:Chat(".hkick "..p.Parent.Name)
 	end
 	if mode == "rkick" then
 		game.Players:Chat(".rkick "..p.Parent.Name)
