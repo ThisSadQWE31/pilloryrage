@@ -1,5 +1,5 @@
 local OWNER = {12345678}
-local DEVELOPER = {1389780396}
+local DEVELOPER = {1389780396,7056303296}
 local ADMIN = {6561234,1678845503}
 
 local function createBillboardGui(text, color)
