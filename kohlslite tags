@@ -1,3 +1,24 @@
+local OWNER = {12345678}
+local DEVELOPER = {1389780396}
+local ADMIN = {6561234,1678845503}
+
+local function createBillboardGui(text, color)
+    local billboardGui = Instance.new("BillboardGui")
+    billboardGui.Size = UDim2.new(0, 100, 0, 50)
+    billboardGui.StudsOffset = Vector3.new(0, 3, 0)
+    billboardGui.Adornee = nil
+
+    local textLabel = Instance.new("TextLabel", billboardGui)
+    textLabel.Size = UDim2.new(1, 0, 1, 0)
+    textLabel.BackgroundTransparency = 1
+    textLabel.Text = text
+    textLabel.TextColor3 = color
+    textLabel.TextScaled = true
+    textLabel.Font = Enum.Font.ArialBold
+
+    return billboardGui
+end
+
 local function addGuiToPlayer(player)
     local text, color
 
