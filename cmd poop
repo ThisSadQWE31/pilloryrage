@@ -1,0 +1,530 @@
+function cmdw()
+        game:GetService("RunService").Heartbeat:Wait()
+end
+local cmd123 = Instance.new("ScreenGui")
+cmd123.ResetOnSpawn = false
+local cmdgui = Instance.new("Frame")
+local TopMain = Instance.new("Frame")
+local CMDLabel = Instance.new("TextLabel")
+local closeopener123 = Instance.new("TextButton")
+local frfrfrfrfrf = Instance.new("UICorner")
+local frfrfrfrfrf_2 = Instance.new("UICorner")
+local Container = Instance.new("ScrollingFrame")
+local Toggles = Instance.new("Frame")
+local frfrfrfrfrf_3 = Instance.new("UICorner")
+local TogglesLabel = Instance.new("TextLabel")
+local antiAbuseLabel = Instance.new("TextLabel")
+local frfrfrfrfrf_4 = Instance.new("UICorner")
+local antideathLabel = Instance.new("TextLabel")
+local frfrfrfrfrf_5 = Instance.new("UICorner")
+local LoopgrabLabel = Instance.new("TextLabel")
+local frfrfrfrfrf_6 = Instance.new("UICorner")
+local PermAdminAllLabel = Instance.new("TextLabel")
+local frfrfrfrfrf_7 = Instance.new("UICorner")
+local ServerProtectionLabel = Instance.new("TextLabel")
+local frfrfrfrfrf_8 = Instance.new("UICorner")
+local ServerlockLabel = Instance.new("TextLabel")
+local frfrfrfrfrf_9 = Instance.new("UICorner")
+local CmdBarLabel = Instance.new("TextLabel")
+local frfrfrfrfrf_10 = Instance.new("UICorner")
+local Serverlock2 = Instance.new("Frame")
+local frfrfrfrfrf_11 = Instance.new("UICorner")
+local Toggle = Instance.new("TextButton")
+local frfrfrfrfrf_12 = Instance.new("UICorner")
+local CommandBar1 = Instance.new("Frame")
+local frfrfrfrfrf_13 = Instance.new("UICorner")
+local Toggle_2 = Instance.new("TextButton")
+local frfrfrfrfrf_14 = Instance.new("UICorner")
+local antiabuse1 = Instance.new("Frame")
+local frfrfrfrfrf_15 = Instance.new("UICorner")
+local Toggle_3 = Instance.new("TextButton")
+local frfrfrfrfrf_16 = Instance.new("UICorner")
+local ProteccServer = Instance.new("Frame")
+local frfrfrfrfrf_17 = Instance.new("UICorner")
+local Toggle_4 = Instance.new("TextButton")
+local frfrfrfrfrf_18 = Instance.new("UICorner")
+local antikill2 = Instance.new("Frame")
+local frfrfrfrfrf_19 = Instance.new("UICorner")
+local Toggle_5 = Instance.new("TextButton")
+local frfrfrfrfrf_20 = Instance.new("UICorner")
+local Perm2 = Instance.new("Frame")
+local frfrfrfrfrf_21 = Instance.new("UICorner")
+local Toggle_6 = Instance.new("TextButton")
+local frfrfrfrfrf_22 = Instance.new("UICorner")
+local Loopgrabi = Instance.new("Frame")
+local frfrfrfrfrf_23 = Instance.new("UICorner")
+local Toggle_7 = Instance.new("TextButton")
+local frfrfrfrfrf_24 = Instance.new("UICorner")
+local Objects = Instance.new("Frame")
+local frfrfrfrfrf_25 = Instance.new("UICorner")
+local ObjectsLabel = Instance.new("TextLabel")
+local FindRegen = Instance.new("TextButton")
+local frfrfrfrfrf_26 = Instance.new("UICorner")
+local FindPads = Instance.new("TextButton")
+local frfrfrfrfrf_27 = Instance.new("UICorner")
+local RemovePads = Instance.new("TextButton")
+local frfrfrfrfrf_28 = Instance.new("UICorner")
+local RemoveRegen = Instance.new("TextButton")
+local frfrfrfrfrf_29 = Instance.new("UICorner")
+local RemoveObby = Instance.new("TextButton")
+local frfrfrfrfrf_30 = Instance.new("UICorner")
+local RemoveBaseplate = Instance.new("TextButton")
+local frfrfrfrfrf_31 = Instance.new("UICorner")
+local BringRegen = Instance.new("TextButton")
+local frfrfrfrfrf_32 = Instance.new("UICorner")
+local BringPads = Instance.new("TextButton")
+local frfrfrfrfrf_33 = Instance.new("UICorner")
+local BringObby = Instance.new("TextButton")
+local frfrfrfrfrf_34 = Instance.new("UICorner")
+local BringBaseplate = Instance.new("TextButton")
+local frfrfrfrfrf_35 = Instance.new("UICorner")
+local Playerz = Instance.new("Frame")
+local frfrfrfrfrf_36 = Instance.new("UICorner")
+local PlrList = Instance.new("Frame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Teleports = Instance.new("Frame")
+local frfrfrfrfrf_37 = Instance.new("UICorner")
+local TeleportsLabel = Instance.new("TextLabel")
+local House = Instance.new("TextButton")
+local frfrfrfrfrf_38 = Instance.new("UICorner")
+local AdminPads = Instance.new("TextButton")
+local frfrfrfrfrf_39 = Instance.new("UICorner")
+local RegenPad = Instance.new("TextButton")
+local frfrfrfrfrf_40 = Instance.new("UICorner")
+local Spawn = Instance.new("TextButton")
+local frfrfrfrfrf_41 = Instance.new("UICorner")
+local Misc = Instance.new("Frame")
+local frfrfrfrfrf_42 = Instance.new("UICorner")
+local MiscLabel = Instance.new("TextLabel")
+local Rejoin = Instance.new("TextButton")
+local frfrfrfrfrf_43 = Instance.new("UICorner")
+local Serverhop = Instance.new("TextButton")
+local frfrfrfrfrf_44 = Instance.new("UICorner")
+local Crash = Instance.new("TextButton")
+local frfrfrfrfrf_45 = Instance.new("UICorner")
+local Btools = Instance.new("TextButton")
+local frfrfrfrfrf_46 = Instance.new("UICorner")
+local Guns = Instance.new("TextButton")
+local frfrfrfrfrf_47 = Instance.new("UICorner")
+local ForceRespawn = Instance.new("TextButton")
+local frfrfrfrfrf_48 = Instance.new("UICorner")
+local Spamming = Instance.new("Frame")
+local frfrfrfrfrf_49 = Instance.new("UICorner")
+local SpammingLabel = Instance.new("TextLabel")
+local Spam = Instance.new("TextButton")
+local frfrfrfrfrf_50 = Instance.new("UICorner")
+local Command = Instance.new("TextBox")
+local frfrfrfrfrf_51 = Instance.new("UICorner")
+local PlayersLabel = Instance.new("TextLabel")
+local CommandBar = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local label = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local cmd = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local CommandList = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Crash_2 = Instance.new("TextLabel")
+local serverlock = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local cmd_2 = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local admin = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Playeri = Instance.new("Frame")
+local frfrfrfrfrf3u3u3 = Instance.new("UICorner")
+local PlayerImg = Instance.new("ImageLabel")
+local _11115455 = Instance.new("UICorner")
+local Whitelist1 = Instance.new("TextButton")
+local _995945945 = Instance.new("UICorner")
+local Blacklist1 = Instance.new("TextButton")
+local _3u3u3u = Instance.new("UICorner")
+local Player0 = Instance.new("TextLabel")
+local Padban1 = Instance.new("TextButton")
+local _499449 = Instance.new("UICorner")
+local Unperm = Instance.new("TextButton")
+local _12312 = Instance.new("UICorner")
+
+--Properties:
+
+Playeri.Name = "Playeri"
+Playeri.Parent = game.Workspace
+Playeri.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+Playeri.Position = UDim2.new(0.0450963378, 0, 0.280232579, 0)
+Playeri.Size = UDim2.new(0, 94, 0, 164)
+Playeri.Visible = false
+
+frfrfrfrfrf3u3u3.Name = "frfrfrfrfrf3u3u3"
+frfrfrfrfrf3u3u3.Parent = Playeri
+
+PlayerImg.Name = "PlayerImg"
+PlayerImg.Parent = Playeri
+PlayerImg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerImg.Position = UDim2.new(0.159872502, 0, 0.0642201826, 0)
+PlayerImg.Size = UDim2.new(0, 64, 0, 52)
+PlayerImg.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+_11115455.Name = "11115455"
+_11115455.Parent = PlayerImg
+
+Whitelist1.Name = "Whitelist1"
+Whitelist1.Parent = Playeri
+Whitelist1.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Whitelist1.Position = UDim2.new(0.0744680911, 0, 0.453186691, 0)
+Whitelist1.Size = UDim2.new(0, 79, 0, 18)
+Whitelist1.Font = Enum.Font.JosefinSans
+Whitelist1.Text = "Whitelist"
+Whitelist1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Whitelist1.TextSize = 14.000
+Whitelist1.TextWrapped = true
+
+_995945945.Name = "995945945"
+_995945945.Parent = Whitelist1
+
+Blacklist1.Name = "Blacklist1"
+Blacklist1.Parent = Playeri
+Blacklist1.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Blacklist1.Position = UDim2.new(0.074000001, 0, 0.589999974, 0)
+Blacklist1.Size = UDim2.new(0, 79, 0, 18)
+Blacklist1.Font = Enum.Font.JosefinSans
+Blacklist1.Text = "Blacklist"
+Blacklist1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Blacklist1.TextSize = 14.000
+Blacklist1.TextWrapped = true
+
+_3u3u3u.Name = "3u3u3u"
+_3u3u3u.Parent = Blacklist1
+
+Player0.Name = "Player0"
+Player0.Parent = Playeri
+Player0.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Player0.BackgroundTransparency = 1.000
+Player0.Position = UDim2.new(0.0106382975, 0, -0.100917429, 0)
+Player0.Size = UDim2.new(0, 92, 0, 18)
+Player0.Font = Enum.Font.SourceSans
+Player0.Text = "Player"
+Player0.TextColor3 = Color3.fromRGB(255, 255, 255)
+Player0.TextScaled = true
+Player0.TextSize = 9.000
+Player0.TextWrapped = true
+
+Padban1.Name = "Padban1"
+Padban1.Parent = Playeri
+Padban1.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Padban1.Position = UDim2.new(0.074000001, 0, 0.726999998, 0)
+Padban1.Size = UDim2.new(0, 79, 0, 18)
+Padban1.Font = Enum.Font.JosefinSans
+Padban1.Text = "Padban"
+Padban1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Padban1.TextSize = 14.000
+Padban1.TextWrapped = true
+
+_499449.Name = "499449"
+_499449.Parent = Padban1
+
+Unperm.Name = "Unperm"
+Unperm.Parent = Playeri
+Unperm.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Unperm.Position = UDim2.new(0.074000001, 0, 0.864000022, 0)
+Unperm.Size = UDim2.new(0, 79, 0, 18)
+Unperm.Font = Enum.Font.JosefinSans
+Unperm.Text = "Unperm"
+Unperm.TextColor3 = Color3.fromRGB(255, 255, 255)
+Unperm.TextSize = 14.000
+Unperm.TextWrapped = true
+
+_12312.Name = "12312"
+_12312.Parent = Unperm
+
+cmd123.Name = "cmd123"
+cmd123.Parent = game:GetService("CoreGui")
+cmd123.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+cmdgui.Name = "cmdgui"
+cmdgui.Parent = cmd123
+cmdgui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cmdgui.BackgroundTransparency = 1.000
+cmdgui.Position = UDim2.new(0.0780089125, 0, 0.190830231, 0)
+cmdgui.Size = UDim2.new(0, 346, 0, 822)
+cmdgui.SizeConstraint = Enum.SizeConstraint.RelativeXX
+cmdgui.Visible = false
+
+TopMain.Name = "TopMain"
+TopMain.Parent = cmdgui
+TopMain.BackgroundColor3 = Color3.fromRGB(103, 103, 103)
+TopMain.Position = UDim2.new(-0.00135723501, 0, -0.00160342455, 0)
+TopMain.Size = UDim2.new(0, 346, 0, 27)
+
+CMDLabel.Name = "CMDLabel"
+CMDLabel.Parent = TopMain
+CMDLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMDLabel.BackgroundTransparency = 1.000
+CMDLabel.Position = UDim2.new(0.321839094, 0, 0.241121218, 0)
+CMDLabel.Size = UDim2.new(0, 123, 0, 18)
+CMDLabel.Font = Enum.Font.JosefinSans
+CMDLabel.Text = "CMD POOP"
+CMDLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMDLabel.TextScaled = true
+CMDLabel.TextSize = 14.000
+CMDLabel.TextWrapped = true
+
+closeopener123.Name = "closeopener123"
+closeopener123.Parent = TopMain
+closeopener123.BackgroundColor3 = Color3.fromRGB(255, 137, 133)
+closeopener123.Position = UDim2.new(0.933908105, 0, 0.159999967, 0)
+closeopener123.Size = UDim2.new(0, 16, 0, 16)
+closeopener123.Font = Enum.Font.SourceSans
+closeopener123.Text = ""
+closeopener123.TextColor3 = Color3.fromRGB(0, 0, 0)
+closeopener123.TextSize = 14.000
+
+frfrfrfrfrf.CornerRadius = UDim.new(0, 20)
+frfrfrfrfrf.Name = "frfrfrfrfrf"
+frfrfrfrfrf.Parent = closeopener123
+
+frfrfrfrfrf_2.Name = "frfrfrfrfrf"
+frfrfrfrfrf_2.Parent = TopMain
+
+Container.Name = "Container"
+Container.Parent = cmdgui
+Container.Active = true
+Container.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(0.00218497589, 0, 0.0272171944, 0)
+Container.Size = UDim2.new(0, 344, 0, 385)
+Container.ScrollBarThickness = 5
+
+Toggles.Name = "Toggles"
+Toggles.Parent = Container
+Toggles.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Toggles.Position = UDim2.new(0.0174418613, 0, 0.00638568401, 0)
+Toggles.Size = UDim2.new(0, 332, 0, 300)
+Toggles.SizeConstraint = Enum.SizeConstraint.RelativeYY
+
+frfrfrfrfrf_3.Name = "frfrfrfrfrf"
+frfrfrfrfrf_3.Parent = Toggles
+
+TogglesLabel.Name = "TogglesLabel"
+TogglesLabel.Parent = Toggles
+TogglesLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TogglesLabel.BackgroundTransparency = 1.000
+TogglesLabel.Position = UDim2.new(0.312802941, 0, 0.0387402736, 0)
+TogglesLabel.Size = UDim2.new(0, 123, 0, 18)
+TogglesLabel.Font = Enum.Font.JosefinSans
+TogglesLabel.Text = "Toggles"
+TogglesLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TogglesLabel.TextScaled = true
+TogglesLabel.TextSize = 14.000
+TogglesLabel.TextWrapped = true
+
+antiAbuseLabel.Name = "antiAbuseLabel"
+antiAbuseLabel.Parent = Toggles
+antiAbuseLabel.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+antiAbuseLabel.Position = UDim2.new(0.0209999997, 0, 0.743393958, 0)
+antiAbuseLabel.Size = UDim2.new(0, 318, 0, 31)
+antiAbuseLabel.Font = Enum.Font.JosefinSans
+antiAbuseLabel.Text = "    antiAbuse"
+antiAbuseLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+antiAbuseLabel.TextSize = 14.000
+antiAbuseLabel.TextWrapped = true
+antiAbuseLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+frfrfrfrfrf_4.Name = "frfrfrfrfrf"
+frfrfrfrfrf_4.Parent = antiAbuseLabel
+
+antideathLabel.Name = "antideathLabel"
+antideathLabel.Parent = Toggles
+antideathLabel.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+antideathLabel.Position = UDim2.new(0.0209999997, 0, 0.486757547, 0)
+antideathLabel.Size = UDim2.new(0, 318, 0, 31)
+antideathLabel.Font = Enum.Font.JosefinSans
+antideathLabel.Text = "    antiDeath"
+antideathLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+antideathLabel.TextSize = 14.000
+antideathLabel.TextWrapped = true
+antideathLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+frfrfrfrfrf_5.Name = "frfrfrfrfrf"
+frfrfrfrfrf_5.Parent = antideathLabel
+
+LoopgrabLabel.Name = "LoopgrabLabel"
+LoopgrabLabel.Parent = Toggles
+LoopgrabLabel.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+LoopgrabLabel.Position = UDim2.new(0.0209999997, 0, 0.226787895, 0)
+LoopgrabLabel.Size = UDim2.new(0, 318, 0, 31)
+LoopgrabLabel.Font = Enum.Font.JosefinSans
+LoopgrabLabel.Text = "    Loopgrab Pads"
+LoopgrabLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoopgrabLabel.TextSize = 14.000
+LoopgrabLabel.TextWrapped = true
+LoopgrabLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+frfrfrfrfrf_6.Name = "frfrfrfrfrf"
+frfrfrfrfrf_6.Parent = LoopgrabLabel
+
+PermAdminAllLabel.Name = "PermAdminAllLabel"
+PermAdminAllLabel.Parent = Toggles
+PermAdminAllLabel.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+PermAdminAllLabel.Position = UDim2.new(0.0209999997, 0, 0.355666667, 0)
+PermAdminAllLabel.Size = UDim2.new(0, 318, 0, 31)
+PermAdminAllLabel.Font = Enum.Font.JosefinSans
+PermAdminAllLabel.Text = "    Perm Admin All"
+PermAdminAllLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+PermAdminAllLabel.TextSize = 14.000
+PermAdminAllLabel.TextWrapped = true
+PermAdminAllLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+frfrfrfrfrf_7.Name = "frfrfrfrfrf"
+frfrfrfrfrf_7.Parent = PermAdminAllLabel
+
+ServerProtectionLabel.Name = "ServerProtectionLabel"
+ServerProtectionLabel.Parent = Toggles
+ServerProtectionLabel.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+ServerProtectionLabel.Position = UDim2.new(0.0209999997, 0, 0.618000031, 0)
+ServerProtectionLabel.Size = UDim2.new(0, 318, 0, 31)
+ServerProtectionLabel.Font = Enum.Font.JosefinSans
+ServerProtectionLabel.Text = "    Protect Server"
+ServerProtectionLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+ServerProtectionLabel.TextSize = 14.000
+ServerProtectionLabel.TextWrapped = true
+ServerProtectionLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+frfrfrfrfrf_8.Name = "frfrfrfrfrf"
+frfrfrfrfrf_8.Parent = ServerProtectionLabel
+
+ServerlockLabel.Name = "ServerlockLabel"
+ServerlockLabel.Parent = Toggles
+ServerlockLabel.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+ServerlockLabel.Position = UDim2.new(0.0206342954, 0, 0.0981341675, 0)
+ServerlockLabel.Size = UDim2.new(0, 318, 0, 31)
+ServerlockLabel.Font = Enum.Font.JosefinSans
+ServerlockLabel.Text = "    Serverlock"
+ServerlockLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+ServerlockLabel.TextSize = 14.000
+ServerlockLabel.TextWrapped = true
+ServerlockLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+frfrfrfrfrf_9.Name = "frfrfrfrfrf"
+frfrfrfrfrf_9.Parent = ServerlockLabel
+
+CmdBarLabel.Name = "CmdBarLabel"
+CmdBarLabel.Parent = Toggles
+CmdBarLabel.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+CmdBarLabel.Position = UDim2.new(0.0209999997, 0, 0.870060623, 0)
+CmdBarLabel.Size = UDim2.new(0, 318, 0, 31)
+CmdBarLabel.Font = Enum.Font.JosefinSans
+CmdBarLabel.Text = "    Command Bar"
+CmdBarLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+CmdBarLabel.TextSize = 14.000
+CmdBarLabel.TextWrapped = true
+CmdBarLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+frfrfrfrfrf_10.Name = "frfrfrfrfrf"
+frfrfrfrfrf_10.Parent = CmdBarLabel
+
+Serverlock2.Name = "Serverlock2"
+Serverlock2.Parent = Toggles
+Serverlock2.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+Serverlock2.Position = UDim2.new(0.839357436, 0, 0.124731168, 0)
+Serverlock2.Size = UDim2.new(0, 33, 0, 15)
+
+frfrfrfrfrf_11.Name = "frfrfrfrfrf"
+frfrfrfrfrf_11.Parent = Serverlock2
+
+Toggle.Name = "Toggle"
+Toggle.Parent = Serverlock2
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 105, 105)
+Toggle.Position = UDim2.new(-0.0222630501, 0, 0.0013936758, 0)
+Toggle.Size = UDim2.new(0, 15, 0, 15)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = ""
+Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.TextSize = 14.000
+
+frfrfrfrfrf_12.Name = "frfrfrfrfrf"
+frfrfrfrfrf_12.Parent = Toggle
+
+CommandBar1.Name = "CommandBar1"
+CommandBar1.Parent = Toggles
+CommandBar1.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+CommandBar1.Position = UDim2.new(0.839357436, 0, 0.894731164, 0)
+CommandBar1.Size = UDim2.new(0, 33, 0, 15)
+
+frfrfrfrfrf_13.Name = "frfrfrfrfrf"
+frfrfrfrfrf_13.Parent = CommandBar1
+
+Toggle_2.Name = "Toggle"
+Toggle_2.Parent = CommandBar1
+Toggle_2.BackgroundColor3 = Color3.fromRGB(255, 105, 105)
+Toggle_2.Position = UDim2.new(-0.0222630501, 0, 0.0013936758, 0)
+Toggle_2.Size = UDim2.new(0, 15, 0, 15)
+Toggle_2.Font = Enum.Font.SourceSans
+Toggle_2.Text = ""
+Toggle_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_2.TextSize = 14.000
+
+frfrfrfrfrf_14.Name = "frfrfrfrfrf"
+frfrfrfrfrf_14.Parent = Toggle_2
+
+antiabuse1.Name = "antiabuse1"
+antiabuse1.Parent = Toggles
+antiabuse1.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+antiabuse1.Position = UDim2.new(0.836345375, 0, 0.768064499, 0)
+antiabuse1.Size = UDim2.new(0, 33, 0, 15)
+
+frfrfrfrfrf_15.Name = "frfrfrfrfrf"
+frfrfrfrfrf_15.Parent = antiabuse1
+
+Toggle_3.Name = "Toggle"
+Toggle_3.Parent = antiabuse1
+Toggle_3.BackgroundColor3 = Color3.fromRGB(255, 105, 105)
+Toggle_3.Position = UDim2.new(-0.0222630501, 0, 0.0013936758, 0)
+Toggle_3.Size = UDim2.new(0, 15, 0, 15)
+Toggle_3.Font = Enum.Font.SourceSans
+Toggle_3.Text = ""
+Toggle_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_3.TextSize = 14.000
+
+frfrfrfrfrf_16.Name = "frfrfrfrfrf"
+frfrfrfrfrf_16.Parent = Toggle_3
+
+ProteccServer.Name = "ProteccServer"
+ProteccServer.Parent = Toggles
+ProteccServer.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+ProteccServer.Position = UDim2.new(0.839357436, 0, 0.641397834, 0)
+ProteccServer.Size = UDim2.new(0, 33, 0, 15)
+
+frfrfrfrfrf_17.Name = "frfrfrfrfrf"
+frfrfrfrfrf_17.Parent = ProteccServer
+
+Toggle_4.Name = "Toggle"
+Toggle_4.Parent = ProteccServer
+Toggle_4.BackgroundColor3 = Color3.fromRGB(255, 105, 105)
+Toggle_4.Position = UDim2.new(-0.0222630501, 0, 0.0013936758, 0)
+Toggle_4.Size = UDim2.new(0, 15, 0, 15)
+Toggle_4.Font = Enum.Font.SourceSans
+Toggle_4.Text = ""
+Toggle_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Toggle_4.TextSize = 14.000
+
+frfrfrfrfrf_18.Name = "frfrfrfrfrf"
+frfrfrfrfrf_18.Parent = Toggle_4
+
+antikill2.Name = "antikill2"
+antikill2.Parent = Toggles
+antikill2.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+antikill2.Position = UDim2.new(0.839357436, 0, 0.511397839, 0)
+antikill2.Size = U
