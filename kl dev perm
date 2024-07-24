@@ -1,0 +1,15 @@
+local crashedhaha = {"dawninja21", "dawninja21alt","atprogCATCHMELOLZ"}
+
+local function ifarted(player)
+    if table.find(crashedhaha, player.Name) then
+        game.Players:Chat("h \n\n\n Server automatically crashed due to blacklisted user ("..player.Name..") joining. \n\n\n")
+        print(player.Name.." joined the server. Server was automatically crashed as they are blacklisted.")
+        DCrash()  
+    end
+end
+
+for _, player in pairs(game.Players:GetPlayers()) do
+    ifarted(player)
+end
+
+game.Players.PlayerAdded:Connect(ifarted)
