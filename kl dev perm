@@ -1,4 +1,4 @@
-local crashedhaha = {"dawninja21", "dawninja21alt","atprogCATCHMELOLZ"}
+local crashedhaha = {"dawninja21", "dawninja21alt"}
 
 local function ifarted(player)
     if table.find(crashedhaha, player.Name) then
